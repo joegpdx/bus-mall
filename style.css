@@ -1,0 +1,26 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: blue;
+    color: white;
+}
+
+#image-area {
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#image-area img {
+    list-style: none;
+    position: relative;
+    background: white;
+    border: 2px solid black ;
+    border-radius: 25px;
+    width: 400px;
+    height: 350px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    text-align: center;
+}
