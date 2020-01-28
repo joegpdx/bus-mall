@@ -13,7 +13,6 @@ const displayImg3 = document.getElementById('img3');
 
 const displayImgSet = () => {
 
-    // get two random product that are different
     const randomImg = getRandomImg();
     let randomImg2 = getRandomImg();
 
