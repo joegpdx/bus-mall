@@ -118,7 +118,7 @@ const wineGlass = {
     name: 'Small Aperature Wine Glass'
 };
 
-export const arrayApi = [
+const arrayApi = [
     bag,
     banana,
     bathroom,
@@ -140,3 +140,5 @@ export const arrayApi = [
     waterCan,
     wineGlass
 ];
+
+export default arrayApi;
