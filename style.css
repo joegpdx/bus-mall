@@ -1,4 +1,27 @@
+* {
+    box-sizing: border-box;
+}
 header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: blue;
+    color: white;
+}
+html {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+header nav a {
+    color: white;
+    border: 1px solid white;
+    padding: 3px 8px;
+    text-decoration: none;
+    transition: color 200ms ease-in;
+}
+
+h1 {
+    font-family: 'Courier New', Courier, monospace;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -16,11 +39,57 @@ header {
     list-style: none;
     position: relative;
     background: white;
-    border: 2px solid black ;
     border-radius: 25px;
     width: 400px;
     height: 350px;
     margin-right: 5px;
     margin-bottom: 5px;
     text-align: center;
+}
+a {
+    color: black;
+    border: 2px solid blue;
+    padding: 3px 8px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+#reset {
+    color: blue;
+    border: 2px solid blue;
+    padding: 3px 8px;
+    display: flex;
+    justify-content: center;
+    border-radius: 25px;
+    width: 400px;
+    height: 50px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    text-align: center;
+    font-size: 2.1rem;
+    margin: 5px;
+}
+#reset a:hover {
+    box-shadow: 2px 2px 3px #bbb;
+    transform: translate3d(-1px, -1px, 0);
+}
+button:focus { 
+    outline: none; 
+}
+.radio-image {
+    border: 5px solid transparent;
+    border-radius: 100%;
+    width: 50px;
+}
+
+input:checked + .radio-image {
+    border: 5px solid blue;
+}
+
+input {
+    display: none;
+}
+
+.hidden {
+    display: none;
 }

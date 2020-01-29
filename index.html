@@ -10,23 +10,39 @@
 </head>
 
 <body>
+    <Header>
+        <h1>Bus Mall Test Data</h1>
+        <nav>
+            <a href="/">survey</a>
+            <a href="./results.html">Results</a>
+        </nav>
+    </Header>
     <h1>
-        Bus Mall Test Data
-    </h1>
-    <h2>
         You'll receive $100.00 for completing this survey.
-    </h2>
-    <p>
+    </h1>
+    <h1>
         You will be shown three images. Please select the image that you would be most likely to buy.
-    </p>
+    </h1>
     <section id="image-area">
-        <button id="buttonImg1"><img id="img1" src="" alt=""></button>
-
-        <button id="buttonImg2"><img id="img2" src="" alt=""></button>
-
-        <button id="buttonImg3"><img id="img3" src="" alt=""></button>
+        <form>
+            <label>
+                <span id="product1span"></span>
+                <input id="buttonImg1" type='radio' name='product' checked>
+                <img class="radio-image" id="img1" src="" alt="">
+            </label>
+            <label>
+                <span id="product2span"></span>
+                <input id="buttonImg2" type='radio' name='product'>
+                <img class="radio-image" id="img2" src="" alt="">
+            </label>
+            <label>
+                <span id="product3span"></span>
+                <input id="buttonImg3" type='radio' name='product'>
+                <img class="radio-image" id="img3" src="" alt="">
+            </label><br><br>
+            <button id="reset">Next Vote!!</button>
+        </form>
     </section>
-    <button id="reset">Next Set</button>
     <script type="module" src="./src/app.js"></script>
 </body>
 
