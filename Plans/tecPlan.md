@@ -23,3 +23,24 @@ Display Side by side
     Need HTML to display image
 
 Click functionality
+
+1. keep track of how many times a user has voted, period (up to 25)
+2. keep track of votes for a given product
+
+3. display three random NON-duplicated products
+4. display three NEW NON-duplicated poducts ***refresh products between votes***
+
+    a. whichever one they clicked on, see if they've voted for it before
+    
+    b. EVENT LISTENER
+    c. when they select a product, update the total votes
+    d. update the productVoteDetails
+    e. if theres coffee in the votes array, increment the votes for coffee in the array
+    f. if theres no coffee in the votes array, push some coffee into the array
+
+5. reset the whole app when finished
+    a. set the votes array ([]) and total votes (0) to their initial states
+
+6. STRETCH keep track of how many times a product appears so we can build a percentage (times clicked / times shown)
+
+7 STRETCH: dont show the same product twice in a row.

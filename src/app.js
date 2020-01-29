@@ -1,5 +1,5 @@
 import arrayApi from './arrayApi.js';
-import { getRandomImg } from '../data/utils.js';
+import { getRandomImg, findById } from '../data/utils.js';
 
 const imgButton1 = document.getElementById('buttonImg1');
 const imgButton2 = document.getElementById('buttonImg2');
@@ -9,11 +9,14 @@ const displayImg1 = document.getElementById('img1');
 const displayImg2 = document.getElementById('img2');
 const displayImg3 = document.getElementById('img3');
 
+window.onload = window.localStorage.clear();
+
+let totalVotes = 0;
+const productVoteDetails = [];
 
 
 const displayImgSet = () => {
 
-    // get two random product that are different
     const randomImg = getRandomImg();
     let randomImg2 = getRandomImg();
 
@@ -38,5 +41,46 @@ const displayImgSet = () => {
 
 displayImgSet();
 
-document.querySelector('reset').addEventListener('click', displayImgSet);
+const form = document.querySelector('form');
+
+form.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    const formData = new FormData(form);
+
+    const selectedProductId = formData.get('product');
+
+    totalVotes++;
+
+    // whichever one they clicked on, see if they've voted for it before
+    const productInVotesArray = findById(productVoteDetails, selectedProductId);
+
+    if (productInVotesArray) {
+        productInVotesArray.votes++;
+    } else {
+        const newVoteObject = {
+            id: selectedProductId,
+            votes: 1,
+        };
+
+        productVoteDetails.push(newVoteObject);
+    }
+
+    document.querySelector('input[name="product"]:checked').checked = false;
+
+    localStorage.setItem('votes', JSON.stringify(productVoteDetails));
+    // EVENT LISTENER
+    // when they select a product, update the total votes
+    // update the productVoteDetails
+    // if theres coffee in the votes array, increment the votes for coffee in the array
+    // if theres no coffee in the votes array, push some coffee into the array
+
+    if (totalVotes >= 25) {
+        window.location = 'results.html';
+    }
+
+    displayImgSet();
+});
+
+
 
