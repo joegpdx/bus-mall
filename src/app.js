@@ -27,7 +27,7 @@ const displayImgSet = () => {
 
     let randomImg3 = getRandomImg();
 
-    while (randomImg3 === randomImg) {
+    while (randomImg3 === randomImg || randomImg3 === randomImg2) {
         randomImg3 = getRandomImg();
     }
 
