@@ -9,6 +9,8 @@ const displayImg1 = document.getElementById('img1');
 const displayImg2 = document.getElementById('img2');
 const displayImg3 = document.getElementById('img3');
 
+window.onload = window.localStorage.clear();
+
 let totalVotes = 0;
 const productVoteDetails = [];
 

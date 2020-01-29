@@ -42,7 +42,7 @@ h1 {
 #image-area img {
     list-style: none;
     position: relative;
-    background: white;
+    background: black;
     border-radius: 25px;
     width: 400px;
     height: 350px;
