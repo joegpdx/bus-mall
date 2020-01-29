@@ -3,7 +3,7 @@
 }
 header {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
     background: blue;
     color: white;
@@ -13,6 +13,8 @@ html {
 }
 
 header nav a {
+    display: flex;
+    justify-content: space-evenly;
     color: white;
     border: 1px solid white;
     padding: 3px 8px;
@@ -23,13 +25,15 @@ header nav a {
 h1 {
     font-family: 'Courier New', Courier, monospace;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
     background: blue;
     color: white;
 }
 
 #image-area {
+    display: flex;
+    justify-content: space-evenly;
     padding: 0;
     display: flex;
     flex-wrap: wrap;
@@ -45,14 +49,6 @@ h1 {
     margin-right: 5px;
     margin-bottom: 5px;
     text-align: center;
-}
-a {
-    color: black;
-    border: 2px solid blue;
-    padding: 3px 8px;
-    text-align: center;
-    display: flex;
-    justify-content: center;
 }
 #reset {
     color: blue;
